@@ -213,7 +213,7 @@ PACQueryParametersFromURL(NSURL *_Nonnull URL) {
 	} else if ([preferredLocalization isEqual:@"nl"]) {
 		consentFormPath = @"consentform_nl";
 	} else {
-		consentFormPath = @"consentform";
+		consentFormPath = @"consentform_en";
 	}
 
   NSURL *URL = [resourceBundle URLForResource:consentFormPath withExtension:@"html"];
