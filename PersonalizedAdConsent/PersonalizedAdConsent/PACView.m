@@ -204,7 +204,19 @@ PACQueryParametersFromURL(NSURL *_Nonnull URL) {
     [self loadCompletedWithError:error];
     return;
   }
-  NSURL *URL = [resourceBundle URLForResource:@"consentform" withExtension:@"html"];
+	NSString *preferredLocalization = [[[NSBundle mainBundle] preferredLocalizations] firstObject];
+	preferredLocalization = [preferredLocalization substringToIndex:2];
+	NSString *consentFormPath;
+
+	if ([preferredLocalization isEqual:@"fr"]) {
+		consentFormPath = @"consentform_fr";
+	} else if ([preferredLocalization isEqual:@"nl"]) {
+		consentFormPath = @"consentform_nl";
+	} else {
+		consentFormPath = @"consentform";
+	}
+
+  NSURL *URL = [resourceBundle URLForResource:consentFormPath withExtension:@"html"];
   NSURLRequest *URLRequest = [[NSURLRequest alloc] initWithURL:URL];
   [_webView loadRequest:URLRequest];
 }
