@@ -123,11 +123,6 @@
       margin-top: 14px;
       text-align: center;
     }
-    .head_intro {
-      color: rgba(0, 0, 0, .71);
-      font-size: 12px;
-      line-height: 16px;
-    }
     #head_question {
       font-size: 18px;
       line-height: 23px;
@@ -154,10 +149,10 @@
       text-align: left;
     }
     #buttons {
-      color: #1A73E8;
+      color: #2693DD;
     }
     .button {
-      border-radius: 8px;
+      border-radius: 4px;
       border: 1px solid #DADCE0;
       box-sizing: border-box;
       cursor: pointer;
@@ -178,7 +173,7 @@
     }
     .button.sel {
       background-color: rgba(26, 115, 232, .08);
-      border: 1px solid #1A73E8;
+	  border: 1px solid #3D6CA9;
       box-shadow: none;
     }
     .button_title {
@@ -186,6 +181,11 @@
       font-weight: 500;
       line-height: 19px;
     }
+  #btn0 {
+	  background-color: #3D6CA9;
+      border: 1px solid #3D6CA9;
+      color: white;
+  }
     .message {
       color: rgba(0, 0, 0, .71);
       font-size: 12px;
@@ -251,7 +251,7 @@
       background-repeat: no-repeat;
       border: 1px solid #DADCE0;
       border-radius: 4px;
-      color: #1A73E8;
+      color: #2693DD;
       display: inline-block;
       font-size: 14px;
       font-weight: 500;
@@ -261,8 +261,8 @@
       vertical-align: middle;
     }
     .agree {
-      background-color: #1A73E8;
-      border: 1px solid #1A73E8;
+      background-color: #3D6CA9;
+      border: 1px solid #3D6CA9;
       border-radius: 4px;
       color: white;
       display: inline-block;
@@ -284,12 +284,12 @@
       -o-transition: opacity .3s .15s ease-in-out;
       transition: opacity .3s .15s ease-in-out;
     }
-    #consent2 .head_intro {
+    #consent2 {
       font-weight: 500;
       margin-bottom: 16px;
     }
     a {
-      color: #1A73E8;
+      color: #2693DD;
     }
     a:link {
       text-decoration: none;
@@ -841,32 +841,31 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">We hechten veel waarde aan uw privacy en de beveiliging van uw gegevens. Deze app is gratis dankzij de advertenties.</div>
-            <div id="head_question">Mogen onze partners uw gegevens blijven gebruiken om advertenties relevant voor u te maken?</div>
+            <div id="head_question">Mogen we je gegevens gebruiken om relevante advertenties te tonen?</div>
             <div class="head_detail">
-              <span id="change_anytime_text1">U kunt in de instellingen van <span class="app_name">App Name</span> uw keuze altijd aanpassen.</span>
-              <span id="head_detail_text">Onze partners verzamelen gegevens en gebruiken een uniek identificatienummer op uw apparaat om u advertenties te tonen.
-                <a href="#" onclick="showProviders();">Meer informatie over hoe <span class="app_name">App Name</span> en onze partners gegevens verzamelen en gebruiken</a>
+				<span id="change_anytime_text1">Je kunt jouw keuze steeds wijzigen in de app-instellingen.</span>
+              <span id="head_detail_text">
+                <a href="#" onclick="showProviders();">Lees hoe <span class="app_name">App Name</span> en onze partners gegevens verzamelen en een uniek identificatienummer op je toestel gebruiken om jou advertenties te tonen.</a>
               </span>
             </div>
           </div>
           <div id="buttons" data-sel="">
-            <div id="btn0" class="button btn0 flex-center" onclick="actionClick(event, 'agree0');">
-              <div class="button_title">Ja, ik wil graag relevante advertenties blijven zien</div>
-            </div>
             <div id="btn1" class="button btn1 flex-center" onclick="showUniqueIdInfo();">
-              <div id="btn1_title" class="button_title">Nee, ik wil advertenties die minder relevant zijn</div>
+              <div id="btn1_title" class="button_title">Nee, minder relevante advertenties zien</div>
             </div>
             <div id="btn2" class="button btn2 flex-center" onclick="actionClick(event, 'install');">
               <div class="button_title">Betalen voor de versie zonder advertenties</div>
             </div>
+			<div id="btn0" class="button btn0 flex-center" onclick="actionClick(event, 'agree0');">
+				<div class="button_title">Ja, relevante advertenties zien</div>
+			</div>
           </div>
         </div>
         <div id="consent0" class="consent no-display">
-          <div class="message"><span id="change_anytime_text2">U kunt in de instellingen van <span class="app_name">App Name</span> altijd uw keuze aanpassen. </span>Meer informatie over hoe onze partners gegevens verzamelen en gebruiken:</div>
+          <div class="message"><span id="change_anytime_text2">Je kunt jouw keuze steeds wijzigen in <span class="app_name">App Name</span> instellingen. </span>Lees hoe onze partners gegevens verzamelen en gebruiken:</div>
           <div id="providers">
           </div>
-          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> uw gegevens gebruikt</a></div>
+          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> je gegevens gebruikt</a></div>
           <div class="footer">
             <div class="actions">
               <div class="back btn" onclick="actionClick(event, 'back0')">Terug</div>
@@ -874,8 +873,8 @@
           </div>
         </div>
         <div id="consent1" class="consent no-display">
-          <div class="message">We werken samen met Google en gebruiken een uniek identificatienummer op uw apparaat om uw voorkeur voor gegevensgebruik te respecteren. U kunt in de instellingen van <span class="app_name">App Name</span> altijd uw keuze aanpassen.</div>
-          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> uw gegevens gebruikt</a></div>
+          <div class="message">We werken samen met Google en gebruiken een uniek identificatienummer op je toestel om zo je keuzes qua datagebruik te respecteren. Je kunt je keuze voor op elk moment wijzigen in de app-instellingen.</div>
+          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> je gegevens gebruikt</a></div>
           <div class="footer">
             <div class="actions">
               <div id="back-btn" class="back btn" onclick="actionClick(event, 'back1')">Terug</div>
@@ -884,9 +883,8 @@
           </div>
         </div>
         <div id="consent2" class="consent no-display">
-          <div class="head_intro">We hechten veel waarde aan uw privacy en de beveiliging van uw gegevens. Deze app is gratis dankzij de advertenties.</div>
-          <div class="message">We werken samen met Google en gebruiken een uniek identificatienummer op uw apparaat om advertenties te tonen die niet zijn afgestemd.</div>
-          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> uw gegevens gebruikt</a></div>
+          <div class="message">We werken samen met Google en gebruiken een uniek identificatienummer op jouw apparaat om advertenties te tonen die niet zijn afgestemd.</div>
+          <div class="how-use-data"><a href="#" onclick="showAppPrivacyPolicy(event)">Hoe <span class="app_name">App Name</span> je gegevens gebruikt</a></div>
           <div class="footer">
             <div class="actions">
               <div class="agree btn" onclick="actionClick(event, 'agree1')">Akkoord</div>
