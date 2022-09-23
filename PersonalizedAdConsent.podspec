@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/googleads/googleads-consent-sdk-ios.git", :tag => "v#{s.version}" }
   s.source_files  = "PersonalizedAdConsent/**/*.{h,m}"
-  s.public_header_files = "PersonalizedAdConsent/PersonalizedAdConsent/*.h"
+  s.public_header_files = "Sources/PersonalizedAdConsent/include/*.h"
   s.resource_bundles = {
-    'PersonalizedAdConsent' => ["PersonalizedAdConsent/PersonalizedAdConsent/PersonalizedAdConsent.bundle/*"]
+    'PersonalizedAdConsent' => ["Sources/PersonalizedAdConsent.bundle/*"]
   }
   s.requires_arc = true
 
